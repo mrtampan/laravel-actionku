@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CobaController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +24,5 @@ Route::post('/saveuser', [UserController::class, 'store'])->name('saveuser');
 Route::get('/edituser/{userid}', [UserController::class, 'edit'])->name('edituser');
 
 Route::post('/updateuser', [UserController::class, 'update'])->name('updateuser');
+
+Route::get('/coba', [CobaController::class, 'index'])->name('indexcoba');
